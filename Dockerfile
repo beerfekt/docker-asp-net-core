@@ -15,6 +15,6 @@ RUN dotnet new webApp -o app --no-https
 
 RUN apt update
 RUN apt install nginx -y
-#RUN service start nginx
+#RUN service nginx start
 
 
