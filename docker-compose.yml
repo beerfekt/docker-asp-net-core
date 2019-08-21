@@ -1,0 +1,27 @@
+version: "3.1"
+services:
+
+#    aspnet-mysql:
+#      image: mysql:5.7
+#      container_name: asp-core-mysql #name des containers
+#      working_dir: /app  #workspace des containers
+#      volumes:            #Ordner die nach draußen gespiegelt werden
+#        - ./app:/app  #order host : ordner im container
+#      environment:            #Einrichtung von Passwort, Datenbank, Nutzer ... etc.
+#        - MYSQL_ROOT_PASSWORD=secret
+#        - MYSQL_DATABASE=rest-backend
+#        - MYSQL_USER=homestead
+#        - MYSQL_PASSWORD=secret
+#      ports:
+#        - "127.0.4.2:8002:3306"    # IP:Port-Host:Port-Container
+    asp-net:
+      build: .
+      container_name: asp-net
+      working_dir: /app
+      volumes:
+          - ./app:/app
+          - ./nginx/sites-available:/etc/nginx/sites-available
+          - ./nginx/sites-enabled:/etc/nginx/sites-enabled
+      ports:
+       - "127.0.2.1:80:80"
+      tty: true
