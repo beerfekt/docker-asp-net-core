@@ -12,7 +12,23 @@ Installation:
 
 Run following commands to setup a basic project with asp in docker:
 
-1. docker-compose up  
-2. ./setup.sh
+1. run and build docker containers:  
+
+```
+docker-compose up  
+```
+2. setup and configure the project  
+```
+./setup.sh
+```
 
 
+3. Deinstallation:  
+   run  
+```
+    docker-compose down
+```
+
+	remove all files from disk  
+
+	remove hosts entries  
