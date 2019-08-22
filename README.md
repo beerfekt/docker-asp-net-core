@@ -25,10 +25,11 @@ docker-compose up
 
 3. Deinstallation:  
    run  
+
 ```
     docker-compose down
 ```
 
-	remove all files from disk  
+remove all files from disk  
 
-	remove hosts entries  
+remove hosts entries  
