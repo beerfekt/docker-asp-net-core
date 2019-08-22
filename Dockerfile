@@ -14,7 +14,7 @@ RUN apt-get update
 RUN apt-get install dotnet-sdk-2.2 -y
 RUN export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-RUN dotnet new webApp -o app --no-https
+RUN dotnet new webApp -o /app/myWebApp --no-https
 
 
 #RUN service nginx start
