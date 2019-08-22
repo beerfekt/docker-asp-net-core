@@ -14,10 +14,10 @@ RUN apt-get update
 RUN apt-get install dotnet-sdk-2.2 -y
 RUN export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-RUN dotnet new webApp -o /app/myWebApp --no-https
+#RUN dotnet new webApp -o /app/myWebApp --no-https
 
-RUN ln -s /etc/nginx/sites-available/docker-nginx.test /etc/nginx/sites-enabled/
-RUN ln -s /etc/nginx/sites-available/docker-asp.test /etc/nginx/sites-enabled/  
+#RUN ln -s /etc/nginx/sites-available/docker-nginx.test /etc/nginx/sites-enabled/
+#RUN ln -s /etc/nginx/sites-available/docker-asp.test /etc/nginx/sites-enabled/  
 
 #RUN dotnet run  /app/myWebApp/
 
