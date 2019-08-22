@@ -16,7 +16,11 @@ RUN export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 RUN dotnet new webApp -o /app/myWebApp --no-https
 
+RUN ln -s /etc/nginx/sites-available/docker-nginx.test /etc/nginx/sites-enabled/
+RUN ln -s /etc/nginx/sites-available/docker-asp.test /etc/nginx/sites-enabled/  
 
-#RUN service nginx start
+#RUN dotnet run  /app/myWebApp/
+
+RUN service nginx start
 
 
