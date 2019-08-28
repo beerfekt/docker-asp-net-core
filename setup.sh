@@ -21,3 +21,8 @@ sudo sed -i "2i$IP $URLASP" /etc/hosts
 
 docker exec  $CONTAINERNAME dotnet run --project ./myWebApp/
 
+
+echo "The ASP App should be avaible at:"
+echo "http://docker-asp.test/ \n"
+echo "Testing if nginx is working via:"
+echo "http://docker-nginx.test/ \n"
